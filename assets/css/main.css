@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial;
+  height: 100vh;
+  background-color: #F1F5F9;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
+.container {
+  width: 60%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.github-repos {
+  padding-block-start: 50px;
+}
+.github-repos .search {
+  padding: 20px;
+  background-color: #EEEEEE;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.github-repos .search input, .github-repos .search button {
+  font-size: 18px;
+  font-weight: bold;
+}
+.github-repos .search input {
+  flex: 1;
+  border-radius: 7px 0 0 7px;
+  caret-color: #FF642F;
+  border: 2px solid transparent;
+  padding: 20px;
+}
+.github-repos .search input:focus {
+  border: 3px solid #FF642F;
+}
+.github-repos .search button {
+  padding: 23px;
+  color: #FFFFFF;
+  border-radius: 0 7px 7px 0;
+  transition: 0.3s linear;
+  background-color: rgba(255, 100, 47, 0.8);
+}
+.github-repos .search button:hover {
+  background-color: #FF642F;
+}
+.github-repos .search button:active {
+  background-color: rgba(255, 100, 47, 0.8);
+}
+.github-repos .results {
+  background-color: #E0E0E0;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+.github-repos .results .repo {
+  position: relative;
+  padding: 15px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  counter-increment: cnt;
+  margin-left: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.github-repos .results .repo:not(:last-child) {
+  margin-bottom: 5px;
+}
+.github-repos .results .repo::before {
+  content: counter(cnt);
+  position: absolute;
+  right: 100%;
+  height: 100%;
+  width: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #027B8C;
+  background-color: #FF4B63;
+  color: white;
+  margin-right: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.github-repos .results .repo p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.github-repos .results .repo .repo-detailes .cnt-stars, .github-repos .results .repo .repo-detailes a {
+  display: inline-block;
+  width: 90px;
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 7px;
+  color: #FFFFFF;
+}
+.github-repos .results .repo .repo-detailes .cnt-stars {
+  transition: 0.3s linear;
+  background-color: rgba(2, 123, 140, 0.8);
+}
+.github-repos .results .repo .repo-detailes .cnt-stars:hover {
+  background-color: #027B8C;
+}
+.github-repos .results .repo .repo-detailes .cnt-stars:active {
+  background-color: rgba(2, 123, 140, 0.8);
+}
+.github-repos .results .repo .repo-detailes a {
+  transition: 0.3s linear;
+  background-color: rgba(255, 75, 99, 0.8);
+}
+.github-repos .results .repo .repo-detailes a:hover {
+  background-color: #FF4B63;
+}
+.github-repos .results .repo .repo-detailes a:active {
+  background-color: rgba(255, 75, 99, 0.8);
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,89 @@
+// Import All Using Helpers Directory
+@use "helpers/usinghelpers" as *;
+@use "helpers/global";
+
+// Begining Of The Project
+
+.github-repos {
+  padding-block-start: 50px;
+  .search {
+    padding: 20px;
+    background-color: color(gry-color-02);
+    border-radius: 10px 10px 0 0;
+    @include flex(null, null, space-between, center, 10px);
+    input, button {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    input {
+      flex: 1;
+      border-radius: 7px 0 0 7px;
+      caret-color: color(red-color-04);
+      border: 2px solid transparent;
+      padding: 20px; 
+      &:focus {
+        border: 3px solid color(red-color-04);
+      }
+    }
+    button {
+      padding: 23px;
+      color: color(wht-color-01);
+      border-radius: 0 7px 7px 0;
+      @include hover-active(color(red-color-04));
+    }
+  }
+  .results {
+    background-color: color(gry-color-03);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    .repo {
+      position: relative;
+      padding: 15px;
+      background-color: color(wht-color-01);
+      border-radius: 5px;
+      counter-increment: cnt;
+      margin-left: 45px;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+      &::before {
+        content: counter(cnt);
+        position: absolute;
+        right: 100%;
+        height: 100%;
+        width: 40px;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: color(grn-color-05);
+        background-color: color(red-color-02);
+        color: white;
+        margin-right: 5px;
+        border-radius: 5px;
+        @include flex(null, null, center, center, null);
+      }
+      @include flex(null, null, space-between, center, null);
+      p {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .repo-detailes {
+        .cnt-stars, a {
+          display: inline-block;
+          width: 90px;
+          padding: 5px 15px;
+          text-align: center;
+          font-size: 18px;
+          font-weight: bold;
+          border-radius: 7px;
+          color: color(wht-color-01);
+        }
+        .cnt-stars {
+          @include hover-active(color(grn-color-05));
+        }
+        a {
+          @include hover-active(color(red-color-02));
+        }
+      }
+    }
+  }
+}
