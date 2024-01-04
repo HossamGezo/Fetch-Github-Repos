@@ -7,5 +7,3 @@
 ## Website Image
 
 <img src="assets/images/app-image.png" width="100%"/>
-
-// To Watch Preview Hit (cmd + shift + v)
